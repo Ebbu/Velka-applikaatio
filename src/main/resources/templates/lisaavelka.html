@@ -1,0 +1,21 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>Lisaa velka</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Lisaa Velka</h1>
+	<div>
+		<form th:object="${velka}" th:action="@{save}" action="#" method="post">
+			
+			<label for="velka">Velan maara euroina:</label> <input type="text" id="velka"
+				th:field="*{velka}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<label for="info">Info</label> <input type="text" id="info"
+				th:field="*{info}" />
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>
