@@ -24,7 +24,7 @@
 			<th sec:authorize="hasRole('ADMIN')"></th>
 		</tr>
 		<tr th:each="velka : ${velka}">
-			<td th:text="${velka.velka}"></td>
+			<td th:text="${velka.value}"></td>
 			<td th:text="${velka.info}"></td>
 			<td sec:authorize="hasAuthority('ADMIN')">
 			<a th:href="@{/delete/{id}(id=${velka.id})}"><input type="submit" value="Remove" /></a></td>

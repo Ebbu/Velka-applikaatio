@@ -39,8 +39,8 @@ public class VelkaApplication {
 			  
 			 
 			log.info("haetaan kaikki velat");
-			for (Velka velka : repository.findAll()) {
-				log.info(velka.toString());
+			for (Velka value : repository.findAll()) {
+				log.info(value.toString());
 			}
 
 		};

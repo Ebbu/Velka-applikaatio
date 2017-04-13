@@ -1,5 +1,6 @@
 package com.velka.domain;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -10,12 +11,12 @@ import javax.persistence.Id;
 public class Velka {
 
 
-
-	@Id
+    @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "id", nullable = false, updatable = false)
     private Long id;
 
-    private String velka;
+    private String value;
     private String info;
     
     public Velka() {
@@ -23,10 +24,10 @@ public class Velka {
     } 
 
 
-    public Velka(Long id, String velka, String info) {
+    public Velka(Long id, String value, String info) {
 		super();
 		this.id = id;
-		this.velka = velka;
+		this.value = value;
 		this.info = info;
 	}
 
@@ -38,12 +39,12 @@ public class Velka {
 		this.id = id;
 	}
 
-	public String getVelka() {
-		return velka;
+	public String getValue() {
+		return value;
 	}
 
-	public void setVelka(String velka) {
-		this.velka = velka;
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 	public String getInfo() {
@@ -56,7 +57,7 @@ public class Velka {
 
 	@Override
 	public String toString() {
-		return "Velka [id=" + id + ", velka=" + velka + ", info=" + info + "]";
+		return "Velka [id=" + id + ", value=" + value + ", info=" + info + "]";
 	}
 
 	

@@ -11,6 +11,6 @@ import org.springframework.data.rest.core.annotation.RepositoryRestResource;
 
 @RepositoryRestResource(collectionResourceRel = "velka", path = "velka")
 public interface VelkaRepository extends CrudRepository<Velka, Long> {
-	List<Velka> findById(String velka);
+	List<Velka> findById(String id);
 
 }
