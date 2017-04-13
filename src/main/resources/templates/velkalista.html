@@ -15,7 +15,7 @@
 			<input type="submit" value="Sign Out" />
 		</form>
 	</div>
-	<h1>Kayttajan velat:</h1>
+	<h1>Käyttäjän velat:</h1>
 	<table style="width: 1%;" border="1" cellpadding="1">
 		<tr>
 			<th>Velka</th>
@@ -30,7 +30,7 @@
 			<a th:href="@{/delete/{id}(id=${velka.id})}"><input type="submit" value="Remove" /></a></td>
 		</tr>
 	</table>
-	<a href="/add"><input type="submit" value="Lisaa velka" /></a>
+	<a href="/add"><input type="submit" value="Lisää velka" sec:authorize="hasAuthority('ADMIN')" /></a>
 	
   
 </body>
