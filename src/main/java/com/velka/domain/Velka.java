@@ -9,7 +9,9 @@ import javax.persistence.Id;
 @Entity
 public class Velka {
 
-    @Id
+
+
+	@Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
 
@@ -17,10 +19,13 @@ public class Velka {
     private String info;
     
     public Velka() {
+    	super();
     } 
 
-	public Velka(String velka, String info) {
-		super(); 
+
+    public Velka(Long id, String velka, String info) {
+		super();
+		this.id = id;
 		this.velka = velka;
 		this.info = info;
 	}

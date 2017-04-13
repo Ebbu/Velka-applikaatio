@@ -27,8 +27,8 @@ public class VelkaApplication {
 	public CommandLineRunner velkaLista(VelkaRepository repository, KayttajaRepository urepository) {
 		return (args) -> {
 			log.info("Lisätään velkoja");
-			repository.save(new Velka("100", "Dokattii"));
-			repository.save(new Velka("200", "Maksa ruuast"));	
+			repository.save(new Velka((long) 1, "100", "Dokattii"));
+			repository.save(new Velka((long) 2,"200", "Maksa ruuast"));	
 			
 		
 			log.info("Lisätään käyttäjät in-memory tietokantaan.");
