@@ -1,1 +1,2 @@
-"# Velka-applikaatio" 
+ 
+Spring React Thymeleaf Maven
